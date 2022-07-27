@@ -20,7 +20,9 @@ use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Composer;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(name: 'make:clickVyhouse-migration')]
 final class MakeClickhouseMigrationCommand extends Command
 {
     private MigrationCreator $creator;

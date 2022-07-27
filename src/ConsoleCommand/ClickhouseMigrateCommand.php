@@ -17,7 +17,9 @@ use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Cog\Laravel\Clickhouse\Migration\Migrator;
 use Illuminate\Contracts\Config\Repository as AppConfigRepositoryInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(name: 'clickhouse:migrate')]
 final class ClickhouseMigrateCommand extends Command
 {
     use ConfirmableTrait;
